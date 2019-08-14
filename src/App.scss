@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: rgb(244, 244, 244);
+}
+
+.heading {
+  background-color: rgb(72, 70, 69);
+  padding: 2rem 0;
+
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.form-control {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search,
+.button {
+  display: inline-block;
+  border: 1px solid rgb(72, 70, 69);
+  border-radius: 5px;
+  padding: 1.7rem 1.5rem;
+  outline: none;
+  font-size: 1.7rem;
+}
+
+.search {
+  width: 30rem;
+}
+
+.button {
+  width: 12rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.recipe-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+ul > li {
+  list-style-position: inside;
+}
+
+.recipe {
+  border: 1px solid rgb(72, 70, 69);
+  padding: 2rem;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  line-height: 3.5rem;
+
+  .recipe-title {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+  }
+
+  .image-div,
+  img {
+    margin: 0 auto;
+  }
+}
+
+.footer p {
+  background-color: rgb(72, 70, 69);
+  text-align: center;
+  font-size: 1.7rem;
+  color: #fff;
+  padding: 2rem 0;
+}
