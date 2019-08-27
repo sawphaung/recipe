@@ -8,7 +8,7 @@ const Search = ({ handleSubmit, handleSearch, search }) => {
         className='search'
         value={search}
         onChange={handleSearch}
-        placeholder='Search the recipe . . .'
+        placeholder='Search your Recipe ...'
       />
       <button className='button' type='submit'>
         Search

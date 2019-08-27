@@ -12,12 +12,14 @@ html {
 
 .heading {
   background-color: rgb(72, 70, 69);
-  padding: 2rem 0;
+  padding: 10rem 0;
 
   h1 {
     text-align: center;
     font-size: 4rem;
     color: #fff;
+    letter-spacing: 2px;
+    text-transform: capitalize;
   }
 }
 
@@ -36,7 +38,8 @@ html {
 .search,
 .button {
   display: inline-block;
-  border: 1px solid rgb(72, 70, 69);
+  border: 1px solid #eee;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 5px;
   padding: 1.7rem 1.5rem;
   outline: none;
@@ -64,20 +67,32 @@ ul > li {
 }
 
 .recipe {
-  border: 1px solid rgb(72, 70, 69);
   padding: 2rem;
   border-radius: 5px;
   font-size: 1.7rem;
   line-height: 3.5rem;
+  background-color: #ddd;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
   .recipe-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: bolder;
     margin: 2rem 0;
   }
 
   .image-div,
   img {
     margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  .calories {
+    margin: 1rem 0;
+
+    span {
+      font-weight: bolder;
+      font-size: 2.2rem;
+    }
   }
 }
 

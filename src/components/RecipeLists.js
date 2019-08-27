@@ -11,6 +11,7 @@ const RecipeLists = ({ recipes }) => {
           calories={recipe.recipe.calories}
           image={recipe.recipe.image}
           ingredients={recipe.recipe.ingredients}
+          time={recipe.recipe.totalTime}
         />
       ))}
     </div>
