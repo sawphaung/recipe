@@ -13,6 +13,7 @@ const Recipe = ({ title, image, calories, ingredients, time }) => {
       <p className='calories'>
         Time: <span>{time}</span> Minutes
       </p>
+
       <p>Ingredients:</p>
       <ul>
         {ingredients.map((ingredient, index) => (
