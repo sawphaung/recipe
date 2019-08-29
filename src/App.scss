@@ -28,6 +28,7 @@ html {
 .container {
   width: 80%;
   margin: 2rem auto;
+  position: relative;
 }
 
 .form-control {
@@ -104,4 +105,6 @@ ul > li {
   font-size: 1.7rem;
   color: #fff;
   padding: 2rem 0;
+  position: absolute;
+  bottom: 0;
 }
