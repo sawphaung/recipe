@@ -2,13 +2,13 @@ import React, { useState, useEffect, Fragment } from 'react';
 import Header from './components/Header';
 import RecipeLists from './components/RecipeLists';
 import Search from './components/Search';
-import Footer from './components/Footer';
 
 import './App.scss';
 
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('chicken');
 
   const APP_ID = 'cf323220';
@@ -20,8 +20,8 @@ function App() {
         `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
       );
       const data = await response.json();
-      console.log(data.hits);
       setRecipes(data.hits);
+      setLoading(false);
     };
     getRecipes();
   }, [query]);
@@ -44,9 +44,8 @@ function App() {
           handleSearch={handleSearch}
           search={search}
         />
-        <RecipeLists recipes={recipes} />
+        <RecipeLists recipes={recipes} loading={loading} />
       </div>
-      <Footer />
     </Fragment>
   );
 }

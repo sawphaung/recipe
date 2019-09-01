@@ -7,11 +7,12 @@
 html {
   font-size: 62.5%;
   font-family: 'Ubuntu', sans-serif;
-  background-color: rgb(244, 244, 244);
+  //   background-color: rgb(244, 244, 244);
 }
 
 .heading {
-  background-color: rgb(72, 70, 69);
+  //   background-color: rgb(72, 70, 69);
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   padding: 8rem 0;
   margin-bottom: 4rem;
   box-shadow: 0 0 2px 0.2px black;
@@ -27,12 +28,11 @@ html {
 
 .container {
   width: 80%;
-  margin: 2rem auto;
+  margin: 3rem auto;
   position: relative;
 }
-
 .form-control {
-  margin: 3rem 0;
+  margin: 3rem 0 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +50,12 @@ html {
 }
 
 .search {
-  width: 30rem;
+  width: 50rem;
+
+  &::placeholder {
+    letter-spacing: 2px;
+    color: #333;
+  }
 }
 
 .button {
@@ -62,7 +67,14 @@ html {
 .recipe-lists {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
+  grid-gap: 5rem;
+  margin: 2rem 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .recipe-lists {
+    grid-template-columns: 1fr;
+  }
 }
 
 ul > li {
@@ -71,22 +83,35 @@ ul > li {
 
 .recipe {
   padding: 2rem;
-  border-radius: 5px;
+  border-radius: 7px;
   font-size: 1.7rem;
   line-height: 3.5rem;
-  background-color: #ddd;
+  //   background-color: #ddd;
+  background: #c9ccd3;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-blend-mode: lighten;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: 200ms all ease;
 
   .recipe-title {
     font-size: 3rem;
     font-weight: bolder;
     margin: 2rem 0;
+    text-align: center;
   }
 
-  .image-div,
-  img {
-    margin: 0 auto;
+  .image-div {
+    text-align: center;
+  }
+
+  .image-div img {
     border-radius: 8px;
+    width: 70%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
 
   .calories {
@@ -97,14 +122,8 @@ ul > li {
       font-size: 2.2rem;
     }
   }
-}
 
-.footer p {
-  background-color: rgb(72, 70, 69);
-  text-align: center;
-  font-size: 1.7rem;
-  color: #fff;
-  padding: 2rem 0;
-  position: absolute;
-  bottom: 0;
+  &:hover {
+    transform: scale(1.02);
+  }
 }
