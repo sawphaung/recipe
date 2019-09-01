@@ -16,6 +16,9 @@ const RecipeLists = ({ recipes, loading }) => {
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
             time={recipe.recipe.totalTime}
+            totalWeight={recipe.recipe.totalWeight}
+            source={recipe.recipe.source}
+            serving={recipe.recipe.yield}
           />
         ))}
       </div>

@@ -1,6 +1,15 @@
 import React from 'react';
 
-const Recipe = ({ title, image, calories, ingredients, time }) => {
+const Recipe = ({
+  title,
+  image,
+  calories,
+  ingredients,
+  time,
+  totalWeight,
+  source,
+  serving
+}) => {
   return (
     <div className='recipe'>
       <h1 className='recipe-title'>{title}</h1>
@@ -13,6 +22,13 @@ const Recipe = ({ title, image, calories, ingredients, time }) => {
       <p className='calories'>
         Time: <span>{time}</span> Minutes
       </p>
+      <p className='calories'>
+        Total Weight: <span>{parseInt(totalWeight)} g</span>
+      </p>
+
+      <p className='calories'>
+        Serving: <span>{serving}</span>{' '}
+      </p>
 
       <p>Ingredients:</p>
       <ul>
@@ -20,6 +36,10 @@ const Recipe = ({ title, image, calories, ingredients, time }) => {
           <li key={index}>{ingredient.text}</li>
         ))}
       </ul>
+
+      <p className='calories'>
+        Source: <span>{source}</span>
+      </p>
     </div>
   );
 };
