@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import Header from './components/Header';
 import RecipeLists from './components/RecipeLists';
 import Search from './components/Search';
+import Footer from './components/Footer';
 
 import './App.scss';
 
@@ -37,15 +38,18 @@ function App() {
   };
   return (
     <Fragment>
-      <Header />
-      <div className='container'>
+      <div className='header'>
+        <Header />
         <Search
           handleSubmit={handleSubmit}
           handleSearch={handleSearch}
           search={search}
         />
+      </div>
+      <div className='container'>
         <RecipeLists recipes={recipes} loading={loading} />
       </div>
+      <Footer />
     </Fragment>
   );
 }

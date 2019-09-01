@@ -1,11 +1,7 @@
 import React from 'react';
 
 const Header = () => {
-  return (
-    <div className='heading'>
-      <h1>Recipe Finder</h1>
-    </div>
-  );
+  return <div className='heading'>Recipe Finder</div>;
 };
 
 export default Header;
