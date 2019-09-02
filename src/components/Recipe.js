@@ -12,10 +12,10 @@ const Recipe = ({
 }) => {
   return (
     <div className='recipe'>
-      <h1 className='recipe-title'>{title}</h1>
       <div className='image-div'>
         <img src={image} alt='' />
       </div>
+      <h1 className='recipe-title'>{title}</h1>
       <p className='calories'>
         Calories: <span>{parseInt(calories)} Kcal</span>
       </p>
