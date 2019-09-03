@@ -21,7 +21,6 @@ function App() {
       );
       const data = await response.json();
       setRecipes(data.hits);
-      console.log(data.hits);
       setLoading(false);
     };
     getRecipes();
