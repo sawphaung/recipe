@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
   font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1.2px;
 }
 
 .header {
@@ -70,35 +71,33 @@ html {
 
   .recipe-lists {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 5rem;
     margin: 2rem 0;
   }
 
   .recipe {
-    padding: 2rem;
+    display: flex;
+    padding: 3rem;
     border-radius: 7px;
     font-size: 1.7rem;
     line-height: 3.5rem;
-    background: #c9ccd3;
-    background-image: linear-gradient(
-      -180deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
-    background-blend-mode: lighten;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     transition: 200ms all ease;
 
-    ul > li {
-      list-style-position: inside;
-    }
+    &_contents {
+      margin-left: 4rem;
 
-    .recipe-title {
-      font-size: 2.4rem;
-      font-weight: bolder;
-      margin: 2rem 0;
-      text-align: center;
+      .recipe-title {
+        font-size: 2.4rem;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      ul > li {
+        list-style-position: inside;
+      }
     }
 
     .image-div {
@@ -157,8 +156,15 @@ html {
       outline: none;
     }
   }
-  .container .recipe-lists {
-    grid-template-columns: 1fr;
+
+  .container {
+    .recipe-lists {
+      grid-template-columns: 1fr;
+    }
+
+    .recipe {
+      display: block;
+    }
   }
 }
 
