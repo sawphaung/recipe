@@ -18,18 +18,19 @@ html {
     ),
     url('./img/cook-2364221_1920.jpg') no-repeat center;
   background-size: cover;
-  height: 70vh;
+  height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 5rem;
 
   .heading {
     font-family: 'Permanent Marker', cursive;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     font-size: 10rem;
     color: #fff;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     text-transform: capitalize;
   }
 
@@ -60,7 +61,7 @@ html {
     color: #285c76;
     background-color: #fff;
     transition: 300ms all;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 }
 
